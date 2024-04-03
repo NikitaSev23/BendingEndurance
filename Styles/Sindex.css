@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding-top: 5px;
+}
+a {text-decoration: none; color: inherit;}
+img{ pointer-events: none;}
+.main{
+    display: grid;
+    grid-template-areas: "a b" "c d";
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 800px 712px;
+}
+.AnswerGrid{
+    display: grid;
+    grid-template-areas: "a1" "b2" "c3";
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 65px 65px 65px;
+    
+}
+.B{
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    font-family: Arial;
+    font-size: 18px;
+    margin: 5px 0 0 5px;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+}
+.answer_input{
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+input:focus{ outline: none;}
+.input{
+    display: flex;
+    height: 50px;
+    width: auto;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 16px;
+    font-family: Arial;
+    color: #8b8989;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin: 5 5 5 5;
+}
+input{
+    /*height: 45px;*/
+    width: 50px;
+    border: none;
+    direction:unset;
+    text-indent: 5px;
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+.Container{
+    display: flex;
+    align-self: start;
+    justify-self: start;
+    flex-wrap: wrap;
+    padding: 5px 0px 0px 15px;
+}
+.Title{
+    display: grid;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+    justify-self: center;
+    align-items: center;
+    color: white;
+}
+.TableGrid{
+    display: grid;
+    grid-template-areas: "a2" "b2" "c3";
+    justify-items: center;
+    grid-template-columns: 800px;
+    grid-template-rows: 55px 65px auto;
+    padding-bottom: 27px;
+}
+.div1 {
+    display: inline-block;
+    text-align: center;
+    margin-right: 15px; /* Расстояние между радиокнопками */
+}
+.input1 {
+    display: block;
+    margin: 5px auto; /* Расположение радиокнопки по центру внутри div */
+}
+.label1 {
+    display: block;
+    margin-bottom: 5px;
+}

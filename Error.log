@@ -1,0 +1,12 @@
+---------------------------Manager-------------------------------- 
+get_data: < 3.5 8 0.5 0.1 22 < 350 0.8 Шестерня расположена несимметрично относительно опор, менее жесткий вал
+SQL request: SELECT KFbeta FROM Table_6_3 WHERE RWW = 0.8 AND Hardness = '< 350' AND Gear_Arrangement = 'Шестерня расположена несимметрично относительно опор, менее жесткий вал' 
+KFbeta: 1.23 
+SQL request: SELECT YF FROM Table_6_7 WHERE ETC = 22 AND Offset_x = 0.5 
+YF1: 3.39 
+SQL request: SELECT YF FROM Table_6_7 WHERE ETC = 22 AND Offset_x = 0.1 
+YF2: 3.82 
+SQL request: SELECT g0 FROM Table_6_13 WHERE Module_m = '< 3.5' AND n = 8 
+g0: 56 
+SQL request: SELECT Omega_Fnu FROM Table_6_14 WHERE Module_m = '< 3.5' AND n = 8 
+Omega_Fnu: 380 

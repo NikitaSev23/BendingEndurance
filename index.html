@@ -1,0 +1,367 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+	<title>Проверочный расчет на изгибную выносливость зубьев</title>
+	<link rel = "stylesheet" href="Styles/Sindex.css">
+    <script src="Controller.js"></script>
+</head>
+
+<body>
+    <div class = "main">
+        <img width = "100%" src = "IMG/Фон.svg" style="position: absolute;">
+
+        <div id = "AG" class = "AnswerGrid" style = "grid-area: a; width: 555px; height: 197px; background: #D9D9D9; border-radius: 10px;">
+            <input class = "answer_input" value="Произведите расчет" readonly>
+            <input class = "answer_input" value="Произведите расчет" readonly>
+            <buttom onclick="TakeArgs()" class = "B" style = "color: white; background-color: #9C8F8F;" >Calculate</buttom>
+        </div>
+
+        <div id = "spform" class = "Container">
+            <div class = "Title" style = "width: 100%; height: 50px; background-color: #9C8F8F; border-radius: 5px 0px 0px 5px;">Вычисляемые значения</div>
+            <div class = "input"> 
+                <div>"σF"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"σFP"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"A"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"A1"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"A2"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"Yβ"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"ωFt"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"ωFν0"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"КFα"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"KFν"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"ωFν"</div>  
+                <input class = "" type="text" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"YF"</div>  
+                <input class = "in" type="text" name = "username" value = "1"> 
+            </div>
+        </div>
+        <div class = "TableGrid">
+            <div class = "Title" style = "width: 100%; height: 50px; background-color: #9C8F8F;">Табличные значения</div>
+            <div id = 'DT' class = "Container" >
+                <div class = "input"> 
+                    <div>"g0"</div>  
+                    <input class = "in" type="text" name = "username" value = "1" readonly> 
+                </div>
+                <div class = "input"> 
+                    <div>"ωFν"</div>  
+                    <input class = "in" type="text" name = "username" value = "1" readonly> 
+                </div>
+                <div class = "input"> 
+                    <div>"YF1"</div>  
+                    <input class = "in" type="text" name = "username" value = "1" readonly> 
+                </div>
+                <div class = "input"> 
+                    <div>"YF2"</div>  
+                    <input class = "in" type="text" name = "username" value = "1" readonly> 
+                </div>
+                <div class = "input"> 
+                    <div>"KFβ"</div>  
+                    <input class = "in" type="text" name = "username" value = "1" readonly> 
+                </div>
+            </div>
+            <div class = "Container">
+                <fieldset>
+                    <legend>Выберите m, мм:</legend>
+                    <div>
+                      <input class = "t1314" type="radio" id="" name="tab6.13.14" value="< 3.5"/>
+                      <label>Меньше 3.5</label>
+                    </div>
+                    <div>
+                      <input class = "t1314" type="radio" id="" name="tab6.13.14" value="3.5 - 10"/>
+                      <label>От 3.5 до 10</label>
+                    </div>
+                    <div>
+                      <input class = "t1314" type="radio" id="" name="tab6.13.14" value="> 10"/>
+                      <label>Больше 10</label>
+                    </div>
+                </fieldset>
+                <fieldset style="width: 412px;">
+                    <legend>Выберите n':</legend>
+                    <div class = "div1">
+                      <input class = "input1 t1314" type="radio" id="" name="tab6.13.14.2" value="4"/>
+                      <label>4</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t1314" type="radio" id="" name="tab6.13.14.2" value="5"/>
+                        <label>5</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t1314" type="radio" id="" name="tab6.13.14.2" value="6"/>
+                        <label>6</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t1314" type="radio" id="" name="tab6.13.14.2" value="7"/>
+                        <label>7</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t1314" type="radio" id="" name="tab6.13.14.2" value="8"/>
+                        <label>8</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t1314" type="radio" id="" name="tab6.13.14.2" value="9"/>
+                        <label>9</label>
+                    </div>
+                </fieldset>
+                <select style="text-align: center;" name="" id="t67">
+                    <option value="">Число зубьев</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="28">28</option>
+                    <option value="30">30</option>
+                    <option value="32">32</option>
+                    <option value="37">37</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">60</option>
+                    <option value="80">80</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                </select>                  
+                <fieldset>
+                    <legend>Выберите твердость рабочей поверхности <br>зубьев НВ:</legend>
+                    <div>
+                      <input class = "t63" type="radio" id="" name="tab6.3" value="> 350"/>
+                      <label>Больше 350</label>
+                    </div>
+                    <div>
+                      <input class = "t63" type="radio" id="" name="tab6.3" value="< 350" />
+                      <label>Меньше 350</label>
+                    </div>
+                </fieldset>
+                <fieldset style="width: 267px;">
+                    <legend>Выберите расположение:</legend>
+                    <div>
+                      <input class = "t63" type="radio" id="" name="tab6.3.2" value="С"/>
+                      <label">Симметричное</label>
+                    </div>
+                    <div>
+                      <input class = "t63" type="radio" id="" name="tab6.3.2" value="НЖ" />
+                      <label>Несиметричное, жесткий вал</label>
+                    </div>
+                    <div>
+                      <input class = "t63" type="radio" id="" name="tab6.3.2" value="Н" />
+                      <label>Несиметричное</label>
+                    </div>
+                    <div>
+                        <input class = "t63" type="radio" id="" name="tab6.3.2" value="К" />
+                        <label>Консольное</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Выберите относительную ширину колеса:</legend>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="0.2"/>
+                        <label>0.2</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="0.4"/>
+                        <label>0.4</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="0.6"/>
+                        <label>0.6</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="0.8"/>
+                        <label>0.8</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="1.0"/>
+                        <label>1.0</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="1.2"/>
+                        <label>1.2</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="1.4"/>
+                        <label>1.4</label>
+                    </div>
+                    <div class = "div1">
+                        <input class = "input1 t63" type="radio" id="" name="tab6.3.3" value="1.6"/>
+                        <label>1.6</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class = "Container">
+            <div class = "Title" style = "width: 100%; height: 50px; background-color: #9C8F8F; border-radius: 5px 0px 0px 5px;">Определяется специалистом</div>
+            <div class = "input"> 
+                <div>"bω"</div>  
+                <input class = "spin" type="text" name = "" value = "1"> 
+            </div>
+            <div class = "input"> 
+                <div>"εa"</div>  
+                <input class = "spin" type="text" name = "" value = "2"> 
+            </div>
+            <div class = "input"> 
+                <div>"aω"</div>  
+                <input class = "spin" type="text" name = "" value = "3"> 
+            </div>
+            <div class = "input"> 
+                <div>"m"</div>  
+                <input class = "spin" type="text" name = "" value = "4"> 
+            </div>
+            <div class = "input"> 
+                <div>"u"</div>  
+                <input class = "spin" type="text" name = "" value = "5"> 
+            </div>
+            <div class = "input"> 
+                <div>"ν"</div>  
+                <input class = "spin" type="text" name = "" value = "6"> 
+            </div>
+            <div class = "input"> 
+                <div>"Ft"</div>  
+                <input class = "spin" type="text" name = "" value = "7"> 
+            </div>
+            <div class = "input"> 
+                <div>"σFP1"</div>  
+                <input class = "spin" type="text" name = "" value = "8"> 
+            </div>
+            <div class = "input"> 
+                <div>"σFP2"</div>  
+                <input class = "spin" type="text" name = "" value = "9"> 
+            </div>
+            <div class = "input"> 
+                <div>"εβ"</div>  
+                <input class = "spin" type="text" name = "" value = "10"> 
+            </div>
+            <div class = "input"> 
+                <div>"β"</div>  
+                <input class = "spin" type="text" name = "" value = "11"> 
+            </div>
+            <fieldset id = "type">
+                <legend>Вид передачи:</legend>
+                <div>
+                  <input type="radio" id="" name="type" value="1"/>
+                  <label">Кососзубая</label>
+                </div>
+                <div>
+                  <input type="radio" id="" name="type" value="2" />
+                  <label>Шевронная</label>
+                </div>
+                <div>
+                  <input type="radio" id="" name="type" value="3" />
+                  <label>Прямозубая с модификацией головки</label>
+                </div>
+                <div>
+                    <input type="radio" id="" name="type" value="4" />
+                    <label>Прямозубая без модификации головки</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Выберите коэффициент смещения x1:</legend>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="0.7"/>
+                    <label>0.7</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="0.5"/>
+                    <label>0.5</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="0.3"/>
+                    <label>0.3</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="0.1"/>
+                    <label>0.1</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="0"/>
+                    <label>0</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="-0.1"/>
+                    <label>-0.1</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="-0.3"/>
+                    <label>-0.3</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab67" value="-0.5"/>
+                    <label>-0.5</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Выберите коэффициент смещения x2:</legend>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="0.7"/>
+                    <label>0.7</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="0.5"/>
+                    <label>0.5</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="0.3"/>
+                    <label>0.3</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="0.1"/>
+                    <label>0.1</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="0"/>
+                    <label>0</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="-0.1"/>
+                    <label>-0.1</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="-0.3"/>
+                    <label>-0.3</label>
+                </div>
+                <div class = "div1">
+                    <input class = "input1 t67" type="radio" id="" name="tab672" value="-0.5"/>
+                    <label>-0.5</label>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>
